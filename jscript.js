@@ -76,16 +76,15 @@ function createBook(e){
         con.showMessage('Enter the Fields','red');
       }
 else {
-    if(isNaN(parseFloat(price.value))){
+    if(isNaN(price.value)){
         con.showMessage('Invalid value','red');
-        return
-      }
+      }else{
       let b1=new Book(bname.value,author.value, price.value);
       con.addToTable(b1);
       con.showMessage('Book Added','green');
-      bname.value=author.value=price.value='';
-    
+      }
 }
+bname.value=author.value=price.value='';
 e.preventDefault();
 
 }
