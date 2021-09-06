@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  background-color: rgb(105, 11, 124);
+}
+
+#main {
+  position: relative;
+  flex-grow: 1;
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px grey;
+  background: linear-gradient(40deg, pink, wheat);
+}
+.form {
+  font-size:1.5em;
+  font-weight: bolder;
+  padding: 5px;  
+  margin-top: 10px;
+  overflow: hidden;
+}
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+}
+.des {
+  border: 2px solid rgba(128, 128, 128, 0.514);
+  border-radius: 10px;
+  width: 80%;
+  padding:6px;
+  font-size:20px;
+  outline-style: none;
+}
+.des:hover {
+  box-shadow: 1px 1px 15px rgba(0, 0, 139, 0.568);
+}
+.des:focus {
+  border: 2px solid rgb(15, 178, 207);
+}
+
+.tabcontainer {
+  background: linear-gradient(40deg, pink, wheat);
+  flex-grow: 1;
+  border: 1px solid rgb(0, 89, 100);
+  box-shadow: 1px 1px 5px rgba(0, 0, 139, 0.568);
+  height: 350px;
+  margin: 50px;
+  padding-left: 15px;
+  overflow-y: scroll;
+}
+.tabcontainer::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.tab {
+  width: 100%;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+td {
+  padding: 2px;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.308);
+}
+
+a.cross {
+  background-image: url("./src/del.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-right: 20px;
+  border-radius: 100%;
+}
+
+.banner {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  left: 10px;
+  right: 10px;
+  border-radius: 10px;
+}
+
+#submit {
+  outline-style: none;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: bolder;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  border-style: none;
+}
+#submit:hover {
+  background-color: rgba(0, 128, 0, 0.761);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media (max-width: 812px) {
+  .tabcontainer {
+    height: 150px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  td { padding:0; }
+
+  .tab {
+     font-size:18px;
+   }
+}
+
+
+@media (max-width: 400px) {
+  #main{
+    margin:20px 15px;
+    width: 100%;
+  }
+
+ .des{
+  font-size:18px;
+ }
+ .tabcontainer{
+   margin:10px 15px;
+ }
+ .tab {
+  font-size:16px;
+}
+
+}
